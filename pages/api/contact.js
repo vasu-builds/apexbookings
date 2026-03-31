@@ -92,7 +92,7 @@ export default async function handler(req, res) {
       ]
 
       await resend.emails.send({
-        from: 'Apex Bookings no-reply@apexbookings.in>',
+        from: 'Apex Bookings <no-reply@apexbookings.in>',
         to: adminEmail,
         subject: `New Enquiry: ${name}${hotel ? ` — ${hotel}` : ''}${service ? ` (${service})` : ''}`,
         html: `
