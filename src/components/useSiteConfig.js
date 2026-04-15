@@ -5,7 +5,7 @@ const DEFAULT_CONFIG = {
     homepage: {
       hero_dashboard:       '/images/gemini_generated_image_58jves58jves58jv.png',
       about_section:        '/images/gemini_generated_image_mth63vmth63vmth6.png',
-      channel_manager_split:'/images/chatgpt-image-mar-19--2026--08_01_36-pm.png',
+      channel_manager_split:'/images/ota-network-new.png',
       booking_engine_split: '/images/gemini_generated_image_mr7hevmr7hevmr7h--1-.png',
       service_pms:          '/images/gemini_generated_image_oiaqimoiaqimoiaq--2-.png',
       service_pos:          '/images/gemini_generated_image_xcwzqixcwzqixcwz--1-.png',

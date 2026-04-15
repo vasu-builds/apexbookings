@@ -42,19 +42,19 @@ export default function Pricing() {
   return (
     <>
             <Head>
-        <title>Hotel Technology Pricing — Starter, Growth & Pro Plans | Apex Bookings</title>
-        <meta name="description" content="Transparent pricing for hotel Channel Manager, Booking Engine, PMS, and Revenue Management. Plans starting from ₹3,000/month. No hidden fees."/>
+        <title>Hotel Technology Pricing — Growth & Pro Plans | Apex Bookings</title>
+        <meta name="description" content="Transparent pricing for hotel Channel Manager, Booking Engine, PMS, and Revenue Management. Plans starting from ₹6,000/month. No hidden fees."/>
         <meta name="keywords" content="hotel technology pricing, channel manager price india, hotel PMS pricing, apex bookings pricing, hotel software cost"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="canonical" href="https://apexbookings.in/pricing"/>
-        <meta property="og:title" content="Hotel Technology Pricing — Starter, Growth & Pro Plans | Apex Bookings"/>
-        <meta property="og:description" content="Transparent pricing for hotel Channel Manager, Booking Engine, PMS, and Revenue Management. Plans starting from ₹3,000/month. No hidden fees."/>
+        <meta property="og:title" content="Hotel Technology Pricing — Growth & Pro Plans | Apex Bookings"/>
+        <meta property="og:description" content="Transparent pricing for hotel Channel Manager, Booking Engine, PMS, and Revenue Management. Plans starting from ₹6,000/month. No hidden fees."/>
         <meta property="og:url" content="https://apexbookings.in/pricing"/>
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://apexbookings.in/images/logo.png"/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Hotel Technology Pricing — Starter, Growth & Pro Plans | Apex Bookings"/>
-        <meta name="twitter:description" content="Transparent pricing for hotel Channel Manager, Booking Engine, PMS, and Revenue Management. Plans starting from ₹3,000/month. No hidden fees."/>
+        <meta name="twitter:title" content="Hotel Technology Pricing — Growth & Pro Plans | Apex Bookings"/>
+        <meta name="twitter:description" content="Transparent pricing for hotel Channel Manager, Booking Engine, PMS, and Revenue Management. Plans starting from ₹6,000/month. No hidden fees."/>
       </Head>
       <Navbar light={true}/>
             <EnquiryModal open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
