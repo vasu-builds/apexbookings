@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       supabase_url: url && !url.includes('your-project') ? '✓ Set' : '✗ Missing',
       service_key: serviceKey && !serviceKey.includes('your-service') ? '✓ Set' : '✗ Missing',
       anon_key: anonKey && !anonKey.includes('your-anon') ? '✓ Set' : '✗ Missing',
-      jwt_secret: process.env.JWT_SECRET && process.env.JWT_SECRET !== 'apex-bookings-secret-change-this' ? '✓ Set' : '⚠ Using default',
+      jwt_secret: process.env.JWT_SECRET && process.env.JWT_SECRET !== 'apex-bookings-secret' ? '✓ Set' : '⚠ Using default',
       resend_key: process.env.RESEND_API_KEY && !process.env.RESEND_API_KEY.includes('your_key') ? '✓ Set' : '✗ Missing',
     },
     supabase: { connected: false, tables: {}, storage: 'unknown', error: null }

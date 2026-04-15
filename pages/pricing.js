@@ -6,11 +6,10 @@ import Footer from '../src/components/Footer'
 import EnquiryModal from '../src/components/EnquiryModal'
 
 const DEFAULT_PLANS = [
-  {name:'Starter',price:'3,000',sub:'Get online, start getting bookings',featured:false,features:['Rates Management','Bookings Management','Payment Collection','Payment Gateway Solutions','Channel Manager','Booking Engine']},
-  {name:'Growth',price:'6,000',sub:'Streamline your daily operations',featured:true,features:['Everything in Starter','Channel Manager','Booking Engine','Cloud PMS','Cloud POS','Front Desk Operations','Billing & Invoicing']},
-  {name:'Pro',price:'15,000',sub:'Full suite with expert management',featured:false,features:['Everything in Growth','Website + Hosting + SSL','Google Hotel Ads + OTA Listing','Revenue Management','Dedicated Account Manager']},
+  {name:'Growth',price:'6,000',sub:'Streamline your daily operations',featured:false,features:['Channel Manager','Booking Engine','Cloud PMS','Cloud POS','Front Desk Operations','Billing & Invoicing']},
+  {name:'Pro',price:'15,000',sub:'Full suite with expert management',featured:true,features:['Everything in Growth','Website + Hosting + SSL','Google Hotel Ads + OTA Listing','Revenue Management','Dedicated Account Manager']},
 ]
-const DEFAULT_COMBO = {visible:true,name:'Complete Hotel Suite',price:'Contact Us',badge:'🔥 Limited Time Offer',features:['Channel Manager','PMS — Property Management System','Booking Engine','Hotel Website Builder','Hosting + SSL Certificate']}
+const DEFAULT_COMBO = {visible:true,name:'Complete Hotel Suite',price:'2,999',originalPrice:'15,000',badge:'🔥 Limited Time Offer',features:['Channel Manager','PMS — Property Management System','Booking Engine','Hotel Website Builder','Hosting + SSL Certificate']}
 
 const CheckIcon = ({gold}) => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{color:gold?'var(--gold-dk)':'var(--blue)',flexShrink:0}}>
@@ -27,7 +26,14 @@ export default function Pricing() {
     fetch('/api/public-config')
       .then(r => r.json())
       .then(d => {
-        if (d.pricing?.length) setPlans(d.pricing)
+        if (d.pricing?.length) {
+          const sorted = [...d.pricing].sort((a, b) => {
+            const pa = parseInt(a.price.replace(/,/g, '')) || 0
+            const pb = parseInt(b.price.replace(/,/g, '')) || 0
+            return pa - pb
+          })
+          setPlans(sorted)
+        }
         if (d.combo) setCombo(d.combo)
       })
       .catch(() => {})
@@ -67,28 +73,19 @@ export default function Pricing() {
           <div className="container">
             <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:16,alignItems:'start'}}>
 
-              {/* 3 regular plans */}
-              {plans.map(p => (
-                <div key={p.name} className={p.featured?'price-col price-dark':'price-col'} style={{borderRadius:18,border:p.featured?'none':'1px solid var(--border)'}}>
-                  {p.featured && <div className="price-badge">Most Popular</div>}
-                  <div className="price-name">{p.name}</div>
-                  <div style={{fontSize:12.5,color:p.featured?'rgba(255,255,255,0.3)':'var(--muted)',marginBottom:20,fontWeight:400}}>{p.sub}</div>
-                  <div className="price-amt">₹{p.price}</div>
-                  <div className="price-per">per month</div>
-                  <div className="price-line"/>
-                  {(p.features||[]).map(f => (
-                    <div key={f} className="price-feature"><CheckIcon/>{f}</div>
-                  ))}
-                  <button onClick={() => setEnquiryOpen(true)} className="price-btn" style={{border:"none",cursor:"pointer",display:"inline-flex",alignItems:"center",gap:8}}>Get Started</button>
-                </div>
-              ))}
-
               {/* Combo card - only if visible */}
               {combo.visible && (
                 <div className="combo-card">
                   <div className="combo-badge">{combo.badge}</div>
-                  <div style={{fontSize:11,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--gold-dk)',marginBottom:12}}>{combo.name}</div>
-                  <div className="combo-price" style={{marginBottom:4}}>{combo.price.startsWith('₹')?combo.price:`₹${combo.price}`}</div>
+                  <div style={{fontSize:12,fontWeight:800,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--gold-dk)',marginBottom:12}}>{combo.name}</div>
+                  <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:4}}>
+                    <div className="combo-price" style={{marginBottom:0}}>{combo.price.startsWith('₹')?combo.price:`₹${combo.price}`}</div>
+                    {combo.originalPrice && (
+                      <div style={{textDecoration:'line-through', color:'#64748b', fontSize:'22px', fontWeight:700}}>
+                        {combo.originalPrice.startsWith('₹')?combo.originalPrice:`₹${combo.originalPrice}`}
+                      </div>
+                    )}
+                  </div>
                   <div className="combo-price-sub" style={{marginBottom:20}}>Special bundle pricing</div>
                   <div style={{height:1,background:'rgba(240,165,0,0.25)',marginBottom:18}}/>
                   <div style={{fontSize:12.5,fontWeight:700,color:'var(--ink)',marginBottom:10,letterSpacing:'0.04em'}}>EVERYTHING INCLUDED:</div>
@@ -104,6 +101,22 @@ export default function Pricing() {
                   <p style={{textAlign:'center',fontSize:12,color:'var(--muted)',marginTop:10}}>Limited availability · Offer ends soon</p>
                 </div>
               )}
+
+              {/* 3 regular plans */}
+              {plans.map(p => (
+                <div key={p.name} className={p.featured?'price-col price-dark':'price-col'} style={{borderRadius:18,border:p.featured?'none':'1px solid var(--border)'}}>
+                  {p.featured && <div className="price-badge">Most Popular</div>}
+                  <div className="price-name" style={{fontSize:'24px', fontWeight:800, color: p.featured ? '#fff' : 'var(--ink)'}}>{p.name}</div>
+                  <div style={{fontSize:13.5,color:p.featured?'rgba(255,255,255,0.85)':'#475569',marginBottom:20,fontWeight:600}}>{p.sub}</div>
+                  <div className="price-amt">₹{p.price}</div>
+                  <div className="price-per">per month</div>
+                  <div className="price-line"/>
+                  {(p.features||[]).map(f => (
+                    <div key={f} className="price-feature"><CheckIcon/>{f}</div>
+                  ))}
+                  <button onClick={() => setEnquiryOpen(true)} className="price-btn" style={{border:"none",cursor:"pointer",display:"inline-flex",alignItems:"center",gap:8}}>Get Started</button>
+                </div>
+              ))}
             </div>
 
             <div style={{marginTop:40,padding:'28px 32px',background:'var(--surface)',borderRadius:14,border:'1px solid var(--border)',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:20}}>

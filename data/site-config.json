@@ -14,8 +14,9 @@
   },
   "combo": {
     "visible": true,
-    "name": "Complete Hotel Suite",
-    "price": "Contact Us",
+    "name": "Complete Hotel Suite ",
+    "price": "2,999",
+    "originalPrice": "15,000",
     "badge": "🔥 Limited Time Offer",
     "features": [
       "Channel Manager",
@@ -27,26 +28,11 @@
   },
   "pricing": [
     {
-      "name": "Starter",
-      "price": "3,000",
-      "sub": "Get online, start getting bookings",
-      "featured": false,
-      "features": [
-        "Rates Management",
-        "Bookings Management",
-        "Payment Collection",
-        "Payment Gateway Solutions",
-        "Channel Manager",
-        "Booking Engine"
-      ]
-    },
-    {
       "name": "Growth",
       "price": "6,000",
       "sub": "Streamline your daily operations",
-      "featured": true,
+      "featured": false,
       "features": [
-        "Everything in Starter",
         "Channel Manager",
         "Booking Engine",
         "Cloud PMS",
@@ -58,8 +44,8 @@
     {
       "name": "Pro",
       "price": "15,000",
-      "sub": "Full suite with expert management",
-      "featured": false,
+      "sub": "Complete Revenue Management",
+      "featured": true,
       "features": [
         "Everything in Growth",
         "Website + Hosting + SSL",

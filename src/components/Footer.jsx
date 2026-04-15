@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-body">
         <div>
-          <img src="/images/logo-white.png" alt="Apex Bookings" style={{height:'34px',width:'auto',display:'block',objectFit:'contain'}}/>
+          <img src="/images/logo-white.png" alt="Apex Bookings" style={{height:'48px',width:'auto',display:'block',objectFit:'contain'}}/>
           <p className="footer-tagline">India's leading hotel revenue management &amp; technology company. Established 2017.</p>
           <div style={{display:'flex',flexDirection:'column',gap:4}}>
             <span className="footer-contact-item">Phartyal's Annexe, Anupam Vihar, Haldwani — 263139</span>

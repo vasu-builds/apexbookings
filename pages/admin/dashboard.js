@@ -493,7 +493,7 @@ export default function Dashboard() {
                     </div>
                     <Toggle checked={config.combo?.visible} onChange={v=>updateField('combo','visible',v)}/>
                   </div>
-                  {[['name','Plan Name'],['price','Price Display'],['badge','Badge Text']].map(([k,l]) => (
+                  {[['name','Plan Name'],['price','Offer Price Display'],['originalPrice','Original Price (Strikethrough)'],['badge','Badge Text']].map(([k,l]) => (
                     <div key={k} style={{marginBottom:16}}>
                       <label className="admin-label">{l}</label>
                       <input className="admin-input" value={config.combo?.[k]||''} onChange={e=>updateField('combo',k,e.target.value)}/>
@@ -518,7 +518,7 @@ export default function Dashboard() {
             {active==='pricing' && (
               <div>
                 <div style={{background:'var(--blue-l)',border:'1px solid rgba(26,79,196,0.2)',borderRadius:10,padding:'12px 16px',marginBottom:20,fontSize:13,color:'var(--blue)',fontWeight:500}}>
-                  3 fixed plans: Starter, Growth, Pro. Combo Offer card is managed under "Combo Offer Card".
+                  2 fixed plans: Growth, Pro. Combo Offer card is managed under "Combo Offer Card".
                 </div>
                 {(config.pricing||[]).map((plan,i) => (
                   <div key={i} className="admin-card">
@@ -599,7 +599,10 @@ export default function Dashboard() {
               <div>
                 {(config.team||[]).map((m,i) => (
                   <div key={i} className="admin-card">
-                    <h3 style={{fontWeight:700,color:'var(--ink)',marginBottom:16,fontSize:14}}>{m.name||`Member ${i+1}`}</h3>
+                    <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:16}}>
+                      <h3 style={{fontWeight:700,color:'var(--ink)',fontSize:14}}>{m.name||`Member ${i+1}`}</h3>
+                      <button onClick={()=>{if(confirm('Remove?')){const t=[...config.team];t.splice(i,1);setConfig(c=>({...c,team:t}))}}} style={{background:'none',border:'none',color:'#dc2626',cursor:'pointer',fontSize:13,fontWeight:600,fontFamily:'inherit'}}>Remove</button>
+                    </div>
                     <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:14,marginBottom:14}}>
                       {[['name','Full Name'],['role','Role / Title'],['initials','Initials (2 letters)']].map(([k,l]) => (
                         <div key={k}>
@@ -617,6 +620,7 @@ export default function Dashboard() {
                     </div>
                   </div>
                 ))}
+                <button className="admin-btn" onClick={()=>setConfig(c=>({...c,team:[...(c.team||[]),{name:'',role:'',initials:'',color:'#1a4fc4',photo:''}]}))}>+ Add Team Member</button>
               </div>
             )}
 

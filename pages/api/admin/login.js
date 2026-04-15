@@ -25,11 +25,13 @@ export default function handler(req, res) {
 
   const validUser = process.env.ADMIN_USER || 'admin'
   const validPass = process.env.ADMIN_PASS || 'apex@2024'
-  const secret    = process.env.JWT_SECRET  || 'apex-bookings-secret-change-this'
+  const secret    = process.env.JWT_SECRET  || 'apex-bookings-secret'
 
   // Constant time comparison to prevent timing attacks
   const userMatch = username === validUser
   const passMatch = password === validPass
+
+  console.log(`[Admin Login] Attempt from IP: ${ip}, User: ${username}, Success: ${userMatch && passMatch}`)
 
   if (userMatch && passMatch) {
     const token = jwt.sign({ admin: true }, secret, { expiresIn: '24h' })
@@ -37,6 +39,8 @@ export default function handler(req, res) {
     attempts.delete(ip)
     res.status(200).json({ token })
   } else {
+    if (!userMatch) console.log(`[Admin Login] Username mismatch. Expected: ${validUser}`)
+    if (!passMatch) console.log(`[Admin Login] Password mismatch.`)
     res.status(401).json({ error: 'Invalid credentials' })
   }
 }

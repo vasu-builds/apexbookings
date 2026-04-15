@@ -72,28 +72,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
-            <span className="label">Our Team</span>
-            <h2 className="heading" style={{marginBottom:40}}>The people behind Apex Bookings</h2>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(200px,1fr))',gap:1,background:'var(--border)',border:'1px solid var(--border)',borderRadius:18,overflow:'hidden'}}>
-              {[
-                {name:'Veera Saravanan',role:'Founder & CEO',initials:'VS',bg:'#1a4fc4'},
-                {name:'Uma Maheswari',role:'Director & VP — Sales',initials:'UM',bg:'#7c3aed'},
-                {name:'Sangeetha Vijay',role:'Technical Head',initials:'SV',bg:'#0891b2'},
-                {name:'Lakshmi Sree',role:'Strategic Consultant & Operations',initials:'LS',bg:'#059669'},
-              ].map((m,i) => (
-                <div key={i} style={{background:'white',padding:'36px 28px',transition:'background 0.15s'}}
-                  onMouseEnter={e=>e.currentTarget.style.background='#fafbff'}
-                  onMouseLeave={e=>e.currentTarget.style.background='white'}>
-                  <div style={{width:52,height:52,borderRadius:13,background:m.bg,display:'flex',alignItems:'center',justifyContent:'center',fontSize:19,fontWeight:800,color:'white',marginBottom:16,fontFamily:'Outfit,sans-serif'}}>{m.initials}</div>
-                  <div style={{fontSize:16,fontWeight:700,color:'var(--ink)',marginBottom:4,letterSpacing:'-0.01em'}}>{m.name}</div>
-                  <div style={{fontSize:13,color:'var(--muted)'}}>{m.role}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         <div className="cta-band">
           <div className="container">
