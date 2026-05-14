@@ -9,18 +9,24 @@ export default function Footer() {
           <p className="footer-tagline">India's leading hotel revenue management &amp; technology company. Established 2017.</p>
           <div style={{display:'flex',flexDirection:'column',gap:4}}>
             <span className="footer-contact-item">Phartyal's Annexe, Anupam Vihar, Haldwani — 263139</span>
-            <span className="footer-contact-item">+91 8171871902 &nbsp;/&nbsp; +91 8979071902</span>
-            <span className="footer-contact-item">info@apexbookings.in &nbsp;/&nbsp; support@apexbookings.in</span>
+            <span className="footer-contact-item" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>+91 8171871902</span>
+            <span className="footer-contact-item">info@apexbookings.in</span>
           </div>
         </div>
         {[
           {h:'Products',links:[['Booking Engine','/booking-engine'],['Channel Manager','/channel-manager'],['Cloud PMS','/cloud-pms'],['Cloud POS','/cloud-pos'],['Google Hotel Ads','/google-hotel-ads']]},
           {h:'Services',links:[['Revenue Management','/revenue-management'],['OTA Listing','/ota-listing'],['Digital Marketing','/digital-marketing'],['Website Development','/website-development'],['Payment Gateway','/payment-gateway']]},
-          {h:'Company',links:[['Home','/'],['About Us','/about'],['Blog','/blog'],['Contact','/contact']]},
+          {h:'Company',links:[['Home','/'],['About Us','/about'],['Blog','/blog'],['Contact','/contact'],['Get Pricing Quote','#quote']]},
         ].map(({h,links}) => (
           <div key={h}>
             <p className="footer-col-h">{h}</p>
-            {links.map(([label,href]) => <Link key={href} href={href} className="footer-link">{label}</Link>)}
+            {links.map(([label,href]) => 
+              href === '#quote' ? (
+                <a key={href} href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-enquiry-modal', {detail: {service: 'Pricing Quote'}})) }} className="footer-link">{label}</a>
+              ) : (
+                <Link key={href} href={href} className="footer-link">{label}</Link>
+              )
+            )}
           </div>
         ))}
       </div>

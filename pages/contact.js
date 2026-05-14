@@ -102,8 +102,8 @@ export default function Contact() {
                 <div>
                   {[
                     {l:'Address', v:"Phartyal's Annexe, Anupam Vihar\nHaldwani — 263139, Uttarakhand"},
-                    {l:'Phone', v:'+91 8171871902\n+91 8979071902'},
-                    {l:'Email', v:'info@apexbookings.in\nsupport@apexbookings.in'},
+                    {l:'Phone', v:'+91 8171871902'},
+                    {l:'Email', v:'info@apexbookings.in'},
                     {l:'Hours', v:'Monday – Saturday\n9:00 AM – 6:00 PM IST'},
                   ].map((item,i) => (
                     <div key={i} className="contact-info">
