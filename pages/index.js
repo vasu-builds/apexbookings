@@ -262,12 +262,7 @@ export default function Home() {
               <span className="label">Products & Services</span>
               <h2 className="heading">Everything a hotel needs to win online</h2>
             </div>
-            <Link href="/pricing" style={{fontSize:13,fontWeight:600,color:'var(--muted)',display:'inline-flex',alignItems:'center',gap:5,textDecoration:'none',letterSpacing:'0.01em',transition:'color 0.15s'}}
-              onMouseEnter={e=>e.currentTarget.style.color='var(--blue)'}
-              onMouseLeave={e=>e.currentTarget.style.color='var(--muted)'}>
-              See Pricing
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
+
           </div>
           <div className="svc-wrap">
             <div className="svc-list">

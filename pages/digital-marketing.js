@@ -62,7 +62,7 @@ export default function Page() {
               <p style={{fontSize:16,color:'rgba(255,255,255,0.5)',lineHeight:1.8,maxWidth:460,marginBottom:36,fontWeight:400}}>Google Ads, Instagram, Facebook, reputation management, and SEO — executed by a team that understands hospitality. Our hotel partners see up to 5x revenue growth.</p>
               <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
                 <button onClick={() => setEnquiryOpen(true)} style={{border:"none",cursor:"pointer",background:"none",padding:0,font:"inherit",display:"inline-flex",alignItems:"center"}} className="btn-whatsapp">() Get Started</button>
-                <Link href="/pricing" className="btn-ghost">See Pricing</Link>
+
               </div>
             </div>
             <div className="inner-hero-img-wrap">

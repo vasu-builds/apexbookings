@@ -111,7 +111,7 @@ export default function Page() {
               </p>
               <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
                 <button onClick={() => setEnquiryOpen(true)} style={{border:"none",cursor:"pointer",background:"none",padding:0,font:"inherit",display:"inline-flex",alignItems:"center"}} className="btn-whatsapp">Get Started on WhatsApp</button>
-                <Link href="/pricing" className="btn-ghost">See Pricing</Link>
+
               </div>
             </div>
             <div className="inner-hero-img-wrap">

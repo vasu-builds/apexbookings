@@ -92,7 +92,7 @@ export default function Navbar({ light = false }) {
                 </div>
               </div>
 
-              <Link href="/pricing" className="nav-btn">Pricing</Link>
+
               <Link href="/about" className="nav-btn">About</Link>
               <Link href="/contact" className="nav-btn">Contact</Link>
             </div>
@@ -122,7 +122,7 @@ export default function Navbar({ light = false }) {
       {/* Mobile nav */}
       <div className={`mobile-nav${mobileOpen ? ' open' : ''}`}>
         <Link href="/" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Home</Link>
-        <Link href="/pricing" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Pricing</Link>
+
         <Link href="/about" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>About</Link>
         <Link href="/contact" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Contact</Link>
 

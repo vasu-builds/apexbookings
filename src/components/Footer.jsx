@@ -16,7 +16,7 @@ export default function Footer() {
         {[
           {h:'Products',links:[['Booking Engine','/booking-engine'],['Channel Manager','/channel-manager'],['Cloud PMS','/cloud-pms'],['Cloud POS','/cloud-pos'],['Google Hotel Ads','/google-hotel-ads']]},
           {h:'Services',links:[['Revenue Management','/revenue-management'],['OTA Listing','/ota-listing'],['Digital Marketing','/digital-marketing'],['Website Development','/website-development'],['Payment Gateway','/payment-gateway']]},
-          {h:'Company',links:[['Home','/'],['About Us','/about'],['Pricing','/pricing'],['Blog','/blog'],['Contact','/contact']]},
+          {h:'Company',links:[['Home','/'],['About Us','/about'],['Blog','/blog'],['Contact','/contact']]},
         ].map(({h,links}) => (
           <div key={h}>
             <p className="footer-col-h">{h}</p>
