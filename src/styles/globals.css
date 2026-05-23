@@ -5,7 +5,7 @@
 
 /* ─── RESET & BASE ──────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 17px; }
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   background: #ffffff;
@@ -366,7 +366,7 @@ button { cursor: pointer; font-family: inherit; }
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--blue); margin-bottom: 12px;
 }
-.label-w { color: rgba(255,255,255,0.35); }
+.label-w { color: rgba(255,255,255,0.7); }
 
 .heading {
   font-family: 'Outfit', sans-serif;
@@ -375,7 +375,7 @@ button { cursor: pointer; font-family: inherit; }
   letter-spacing: -0.03em; line-height: 1.1;
 }
 .heading-w { color: white; }
-.subtext { font-size: 16px; color: var(--muted); line-height: 1.75; margin-top: 12px; font-weight: 400; }
+.subtext { font-size: 17px; color: #4b5563; line-height: 1.8; margin-top: 12px; font-weight: 400; }
 
 .section-head { margin-bottom: 48px; }
 .section-head-row {
@@ -512,8 +512,8 @@ button { cursor: pointer; font-family: inherit; }
 }
 .split-img-wrap img { width: 100%; display: block; }
 .split-text p {
-  font-size: 15.5px; color: var(--muted);
-  line-height: 1.8; margin-bottom: 14px; font-weight: 400;
+  font-size: 17px; color: #4b5563;
+  line-height: 1.85; margin-bottom: 14px; font-weight: 400;
 }
 
 /* ─── STATS ROW ─────────────────────────── */
@@ -722,7 +722,7 @@ button { cursor: pointer; font-family: inherit; }
 @media (min-width: 1024px) { .footer-body { grid-template-columns: 2fr 1fr 1fr 1fr; padding: 72px 48px 56px; } }
 .footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); display: block; object-fit: contain; }
 .footer-tagline { font-size: 13.5px; color: rgba(255,255,255,0.32); line-height: 1.75; max-width: 260px; margin: 14px 0 20px; font-weight: 400; }
-.footer-contact-item { font-size: 12px; color: rgba(255,255,255,0.22); margin-bottom: 5px; }
+.footer-contact-item { font-size: 1.5rem; color: rgba(255,255,255,0.45); margin-bottom: 10px; font-weight: 600; }
 .footer-col-h { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 14px; }
 .footer-link { display: block; font-size: 13.5px; color: rgba(255,255,255,0.38); padding: 4px 0; transition: color 0.15s; font-weight: 400; }
 .footer-link:hover { color: rgba(255,255,255,0.8); }
@@ -1083,7 +1083,20 @@ input:checked + .admin-toggle-slider::before { transform: translateX(20px); }
   box-shadow: 0 8px 28px rgba(255,255,255,0.2);
 }
 
-/* ─── FIX 2: TALK TO US / CALL BUTTON ───────────────── */
+/* ─── NEW: PROMINENT CALL NOW BUTTON ─────────────────── */
+.btn-call-modern {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: var(--blue); color: #fff;
+  padding: 12px 24px; border-radius: 12px;
+  border: none; cursor: pointer; text-decoration: none;
+  transition: all 0.2s; box-shadow: 0 8px 24px rgba(26,79,196,0.2);
+}
+.btn-call-modern:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(26,79,196,0.3); background: #1340a8; }
+.btn-call-modern-text { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.call-now { font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); line-height: 1; }
+.call-num { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+
+/* ─── FIX 2: TALK TO US / CALL BUTTON (Legacy) ───────────────── */
 .btn-call {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--blue); color: #fff;
@@ -1244,6 +1257,7 @@ input:checked + .admin-toggle-slider::before { transform: translateX(20px); }
 :root {
   --gold-dk: #c4840a;
 }
+html { font-size: 108%; } /* Slightly enlarged base font size, "thode fonts ke sixe bada de all over the website" */
 .stat-val {
   font-family: 'Outfit', sans-serif;
   font-size: 48px; font-weight: 800;

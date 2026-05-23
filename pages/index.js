@@ -7,6 +7,7 @@ import { useSiteConfig } from '../src/components/useSiteConfig'
 import Footer from '../src/components/Footer'
 import TestimonialCarousel from '../src/components/TestimonialCarousel'
 import EnquiryModal from '../src/components/EnquiryModal'
+import CTAButtons from '../src/components/CTAButtons'
 
 function Counter({ end, suffix = '' }) {
   const [v, setV] = useState(0)
@@ -75,11 +76,17 @@ export default function Home() {
 
   return (
     <>
-            <Head>
-        <title>Apex Bookings — Hotel Revenue Management & Technology | India</title>
-        <meta name="description" content="India's leading hotel revenue management company. Channel Manager, Booking Engine, Cloud PMS, OTA Listing & Digital Marketing for hotels. 200+ hotels, 5x average revenue growth."/>
-        <meta name="keywords" content="hotel revenue management india, hotel channel manager, hotel booking engine, hotel PMS, hotel technology company, OTA listing hotel, apex bookings haldwani"/>
+      <Head>
+        <title>Hotel Revenue Management Company in India | Apex Bookings</title>
+        <meta name="description" content="Apex Bookings helps hotels grow revenue with channel manager, booking engine, cloud PMS, OTA listing, Google Hotel Ads & hotel revenue management services across India."/>
+        <meta name="keywords" content="hotel revenue management india, hotel channel manager, hotel booking engine, cloud pms india, ota listing services, google hotel ads agency"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="robots" content="index, follow"/>
         <link rel="canonical" href="https://apexbookings.in"/>
         <meta property="og:title" content="Apex Bookings — Hotel Revenue Management & Technology"/>
@@ -154,16 +161,7 @@ export default function Home() {
               <p className="hero-p anim d3">
                 From channel managers and booking engines to cloud PMS and revenue management — we give hotels the tools and expertise to maximize bookings and outperform competitors.
               </p>
-              <div className="hero-actions anim d4">
-                <a href="tel:+918171871902" className="btn-whatsapp" style={{display:'inline-flex',alignItems:'center',gap:10,textDecoration:'none'}}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{flexShrink:0}}><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-                  <span>
-                    <span style={{display:'block',fontSize:11,fontWeight:600,opacity:0.75,letterSpacing:'0.05em',textTransform:'uppercase',lineHeight:1}}>Call Us Now</span>
-                    <span style={{display:'block',fontSize:17,fontWeight:800,letterSpacing:'-0.01em',lineHeight:1.3}}>+91 81718 71902</span>
-                  </span>
-                </a>
-                <button onClick={() => setEnquiryOpen(true)} className="btn-ghost" style={{border:'1px solid rgba(255,255,255,0.25)',cursor:'pointer'}}>Get Started</button>
-              </div>
+              <CTAButtons onGetStarted={() => setEnquiryOpen(true)} />
               <div className="hero-stats anim d5">
                 {[['7','+','Years Active'],['200','+','Hotels Served'],['15','+','OTA Partners'],['5','x','Revenue Growth']].map(([n,s,l]) => (
                   <div key={l}>
@@ -236,10 +234,10 @@ export default function Home() {
             <h2 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(26px,3vw,42px)',fontWeight:800,color:'white',letterSpacing:'-0.03em',lineHeight:1.1,marginBottom:20}}>
               Built to solve real hospitality problems
             </h2>
-            <p style={{fontSize:15.5,color:'rgba(255,255,255,0.5)',lineHeight:1.8,marginBottom:14,fontWeight:400}}>
+            <p style={{fontSize:15.5,color:'rgba(255,255,255,0.75)',lineHeight:1.8,marginBottom:14,fontWeight:400}}>
               Apex Bookings was founded in 2017 to address a clear gap — mid-segment hotels had no affordable way to compete online against large chains and OTA dominance.
             </p>
-            <p style={{fontSize:15.5,color:'rgba(255,255,255,0.5)',lineHeight:1.8,fontWeight:400}}>
+            <p style={{fontSize:15.5,color:'rgba(255,255,255,0.75)',lineHeight:1.8,fontWeight:400}}>
               Today we serve 200+ hotels across India with channel management, revenue optimization, cloud software, and digital marketing — all under one roof.
             </p>
             <div className="about-stats">
@@ -259,7 +257,6 @@ export default function Home() {
         <div className="container">
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:40,flexWrap:'wrap',gap:16}}>
             <div>
-              <span className="label">Products & Services</span>
               <h2 className="heading">Everything a hotel needs to win online</h2>
             </div>
 
@@ -305,7 +302,6 @@ export default function Home() {
         <div className="container">
           <div className="split-row">
             <div>
-              <span className="label">Channel Manager</span>
               <h2 className="heading" style={{marginBottom:18}}>One click. All 15+ OTAs updated instantly.</h2>
               <div className="split-text">
                 <p>Connect your hotel to every major OTA simultaneously. Update rates, availability, and restrictions from a single dashboard — changes propagate across Booking.com, MakeMyTrip, Goibibo, Airbnb, Expedia and more within seconds.</p>
@@ -328,7 +324,6 @@ export default function Home() {
         <div className="container">
           <div className="split-row" style={{direction:'rtl'}}>
             <div style={{direction:'ltr'}}>
-              <span className="label">Booking Engine</span>
               <h2 className="heading" style={{marginBottom:18}}>Commission-free direct bookings from your website.</h2>
               <div className="split-text">
                 <p>A mobile-first booking engine that converts website visitors into direct guests — with zero OTA commission. Every booking means 100% of the revenue stays with your hotel.</p>
@@ -351,7 +346,6 @@ export default function Home() {
         <div className="container">
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:40,flexWrap:'wrap',gap:16}}>
             <div>
-              <span className="label">Testimonials</span>
               <h2 className="heading">What our hotels say</h2>
             </div>
           </div>
@@ -364,7 +358,6 @@ export default function Home() {
         <div className="container">
           <div className="faq-layout">
             <div className="faq-sticky">
-              <span className="label">FAQ</span>
               <h2 className="heading" style={{marginBottom:14}}>Common questions</h2>
               <p className="subtext" style={{marginTop:0,marginBottom:28}}>Everything you need to know before partnering with Apex Bookings.</p>
               <button onClick={() => setEnquiryOpen(true)} className="btn-primary" style={{display:'inline-flex',border:'none',cursor:'pointer'}}>
@@ -398,7 +391,7 @@ export default function Home() {
             </div>
             <div className="cta-btns">
               <button onClick={() => setEnquiryOpen(true)} className="btn-cta-whatsapp" style={{border:'none',cursor:'pointer'}}>Get Started</button>
-              <a href="tel:+918171871902" className="btn-cta-call" style={{display:"inline-flex",alignItems:"center",gap:8}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{flexShrink:0}}><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg> +91 81718 71902</a>
+              <a href="tel:+918171871902" className="btn-call-modern"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg><div className="btn-call-modern-text"><span className="call-now">Call Us Now</span><span className="call-num">+91 81718 71902</span></div></a>
             </div>
           </div>
         </div>

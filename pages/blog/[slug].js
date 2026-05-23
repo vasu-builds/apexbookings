@@ -101,6 +101,12 @@ export default function BlogPost({ post, related }) {
         <meta name="description" content={post.excerpt || post.title}/>
         <meta name="keywords" content={`${post.category}, hotel management, apex bookings, ${post.title}`}/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href={siteUrl}/>
         <meta property="og:title" content={post.title}/>
         <meta property="og:description" content={post.excerpt || post.title}/>

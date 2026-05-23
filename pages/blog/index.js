@@ -64,6 +64,12 @@ export default function Blog({ posts }) {
         <meta name="description" content="Hotel revenue management tips, OTA strategies, channel manager guides, and technology insights from Apex Bookings — India's leading hotel management company."/>
         <meta name="keywords" content="hotel management blog, hotel revenue tips, OTA strategy hotel, hotel technology blog, hotel channel manager guide"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://apexbookings.in/blog"/>
         <meta property="og:title" content="Blog — Apex Bookings Hotel Technology Insights"/>
         <meta property="og:description" content="Hotel revenue management tips, OTA strategies, and technology guides from Apex Bookings."/>
@@ -76,7 +82,6 @@ export default function Blog({ posts }) {
       <div style={{paddingTop:68}}>
         <div style={{background:'var(--surface)',borderBottom:'1px solid var(--border)',padding:'52px 0 40px'}}>
           <div className="container">
-            <span className="label">Blog</span>
             <h1 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(28px,4vw,52px)',fontWeight:800,color:'var(--ink)',letterSpacing:'-0.03em',marginBottom:10,lineHeight:1.1}}>
               Hotel Technology Insights
             </h1>

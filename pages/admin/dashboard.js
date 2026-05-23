@@ -674,7 +674,7 @@ export default function Dashboard() {
 
                   <div style={{marginBottom:14}}>
                     <label className="admin-label">Title *</label>
-                    <input className="admin-input" placeholder="e.g. How to Increase Hotel Occupancy in 2025"
+                    <input className="admin-input" placeholder="e.g. How to Increase Hotel Occupancy in 2026"
                       value={editPost?editPost.title||'':newPost.title}
                       onChange={e=>{
                         const v=e.target.value

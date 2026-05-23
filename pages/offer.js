@@ -68,6 +68,12 @@ export default function Offer() {
         <title>Complete Hotel Suite — Limited Time Offer | Apex Bookings</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="description" content="Get Channel Manager, PMS, Booking Engine, Website & Hosting in one bundle. Limited time offer from Apex Bookings."/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Navbar light={false}/>
 
@@ -103,7 +109,6 @@ export default function Offer() {
           <div className="offer-grid">
             {/* Left — Features */}
             <div>
-              <span className="label">What&apos;s Included</span>
               <h2 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(22px,3vw,34px)',fontWeight:800,color:'var(--ink)',letterSpacing:'-0.03em',marginBottom:28,lineHeight:1.1}}>
                 Five products. One bundle. One price.
               </h2>

@@ -5,6 +5,7 @@ import Navbar from '../src/components/Navbar'
 import { useSiteConfig } from '../src/components/useSiteConfig'
 import Footer from '../src/components/Footer'
 import EnquiryModal from '../src/components/EnquiryModal'
+import CTAButtons from '../src/components/CTAButtons'
 
 const TABS_DEFAULT = [
   {
@@ -65,10 +66,16 @@ export default function ChannelManager() {
   return (
     <>
             <Head>
-        <title>Hotel Channel Manager — Connect 15+ OTAs | Apex Bookings</title>
-        <meta name="description" content="Apex Bookings Channel Manager syncs rates and inventory across 15+ OTAs in real time. Eliminate overbookings, boost occupancy, and manage all channels from one dashboard."/>
-        <meta name="keywords" content="hotel channel manager, OTA sync, hotel rate management, channel manager india, hotel inventory management"/>
+        <title>Hotel Channel Manager Software in India | Apex Bookings</title>
+        <meta name="description" content="Manage rates and inventory across Booking.com, Goibibo, Agoda, Airbnb & more with Apex Bookings Channel Manager for hotels and resorts."/>
+        <meta name="keywords" content="hotel channel manager, channel manager for hotels, ota channel manager india, hotel inventory distribution software"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="robots" content="index, follow"/>
         <link rel="canonical" href="https://apexbookings.in/channel-manager"/>
         <meta property="og:url" content="https://apexbookings.in/channel-manager"/>
@@ -111,11 +118,11 @@ export default function ChannelManager() {
               <h1 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(30px,5vw,60px)',fontWeight:800,color:'white',letterSpacing:'-0.03em',lineHeight:1.08,marginBottom:18}}>
                 One dashboard.<br/>Every OTA. Real-time.
               </h1>
-              <p style={{fontSize:16,color:'rgba(255,255,255,0.5)',lineHeight:1.8,maxWidth:460,marginBottom:36,fontWeight:400}}>
+              <p style={{fontSize:16,color:'rgba(255,255,255,0.75)',lineHeight:1.8,maxWidth:460,marginBottom:36,fontWeight:400}}>
                 Connect 15+ OTAs and sync rates, inventory, and restrictions across all platforms simultaneously — from a single dashboard.
               </p>
               <div style={{display:'flex',gap:12,flexWrap:'wrap'}}>
-                <button onClick={() => setEnquiryOpen(true)} style={{border:"none",cursor:"pointer",background:"none",padding:0,font:"inherit",display:"inline-flex",alignItems:"center"}} className="btn-primary">Get a Demo</button>
+              <CTAButtons onGetStarted={() => setEnquiryOpen(true)} />
 
               </div>
             </div>
@@ -131,7 +138,6 @@ export default function ChannelManager() {
         <div className="container">
           <div className="split-row">
             <div>
-              <span className="label">OTA Connectivity</span>
               <h2 className="heading" style={{marginBottom:18}}>Simplify your hotel operations with our advanced channel manager</h2>
               <p style={{fontSize:15.5,color:'var(--muted)',lineHeight:1.8,marginBottom:16}}>Seamlessly sync your availability, rates, and inventory across OTAs and your hotel website in real time.</p>
               <div style={{display:'flex',flexDirection:'column',gap:12,marginBottom:28}}>
@@ -180,7 +186,6 @@ export default function ChannelManager() {
       <section className="section">
         <div className="container">
           <div style={{marginBottom:32,textAlign:'center'}}>
-            <span className="label">Features</span>
             <h2 className="heading">Everything inside the Channel Manager</h2>
           </div>
           <div className="feature-tabs">
@@ -215,7 +220,6 @@ export default function ChannelManager() {
               <img src={imgs.how_it_works || "/images/how-it-works.png"} alt="How it works" style={{width:'100%',height:'auto',display:'block'}} loading="lazy"/>
             </div>
             <div>
-              <span className="label">How It Works</span>
               <h2 className="heading" style={{marginBottom:32}}>Get started in 3 simple steps</h2>
               <div className="how-steps">
                 {[
@@ -241,7 +245,6 @@ export default function ChannelManager() {
       <section className="section">
         <div className="container" style={{maxWidth:800}}>
           <div style={{textAlign:'center',marginBottom:40}}>
-            <span className="label">FAQ</span>
             <h2 className="heading">Channel Manager — Frequently Asked Questions</h2>
           </div>
           {FAQS.map((f,i) => (
@@ -266,7 +269,7 @@ export default function ChannelManager() {
             </div>
             <div className="cta-btns">
               <button onClick={() => setEnquiryOpen(true)} className="btn-cta-whatsapp" style={{border:'none',cursor:'pointer'}}>Contact Us</button>
-              <a href="tel:+918171871902" className="btn-call" style={{display:"inline-flex",alignItems:"center",gap:8}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{flexShrink:0}}><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg> +91 81718 71902</a>
+              <a href="tel:+918171871902" className="btn-call-modern"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg><div className="btn-call-modern-text"><span className="call-now">Call Us Now</span><span className="call-num">+91 81718 71902</span></div></a>
             </div>
           </div>
         </div>

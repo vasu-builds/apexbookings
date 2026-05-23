@@ -12,10 +12,16 @@ export default function About() {
   return (
     <>
             <Head>
-        <title>About Apex Bookings — India's Leading Hotel Technology Company</title>
-        <meta name="description" content="Apex Bookings is India's leading hotel revenue management company. 7+ years, 200+ hotels, full-stack hospitality technology and expert management services."/>
+        <title>About Apex Bookings | Hotel Technology & Revenue Experts</title>
+        <meta name="description" content="Learn how Apex Bookings helps 200+ hotels across India grow online revenue with hotel technology, OTA management & digital hospitality solutions."/>
         <meta name="keywords" content="apex bookings, hotel technology company india, hotel management company haldwani, hotel revenue management company"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://apexbookings.in/about"/>
         <meta property="og:title" content="About Apex Bookings — India's Leading Hotel Technology Company"/>
         <meta property="og:description" content="Apex Bookings is India's leading hotel revenue management company. 7+ years, 200+ hotels, full-stack hospitality technology and expert management services."/>
@@ -32,11 +38,10 @@ export default function About() {
         <div style={{background:'var(--ink-2)',padding:'80px 0 64px',position:'relative',overflow:'hidden'}}>
           <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(26,79,196,0.05) 1px, transparent 1px),linear-gradient(90deg, rgba(26,79,196,0.05) 1px, transparent 1px)',backgroundSize:'52px 52px',WebkitMaskImage:'radial-gradient(ellipse 70% 80% at 50% 50%, black, transparent)',maskImage:'radial-gradient(ellipse 70% 80% at 50% 50%, black, transparent)'}}/>
           <div className="container" style={{position:'relative',zIndex:1}}>
-            <span className="label label-w">About Apex Bookings</span>
             <h1 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(28px,4.5vw,60px)',fontWeight:800,color:'white',letterSpacing:'-0.03em',lineHeight:1.1,marginBottom:16,maxWidth:640}}>
               Built to solve real hospitality problems
             </h1>
-            <p style={{fontSize:17,color:'rgba(255,255,255,0.5)',maxWidth:540,lineHeight:1.8,fontWeight:400}}>
+            <p style={{fontSize:17,color:'rgba(255,255,255,0.75)',maxWidth:540,lineHeight:1.8,fontWeight:400}}>
               Founded in 2017 with one goal — give every hotel, regardless of size or budget, the tools to compete online and grow independently.
             </p>
           </div>
@@ -50,14 +55,13 @@ export default function About() {
               <div className="about-badge">2017<small>Est. India</small></div>
             </div>
             <div className="about-text-col">
-              <span className="label label-w">Our Story</span>
               <h2 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(24px,3vw,38px)',fontWeight:800,color:'white',letterSpacing:'-0.03em',lineHeight:1.1,marginBottom:20}}>
                 From a real problem to a leading company
               </h2>
-              <p style={{fontSize:15.5,color:'rgba(255,255,255,0.5)',lineHeight:1.8,marginBottom:14,fontWeight:400}}>
+              <p style={{fontSize:15.5,color:'rgba(255,255,255,0.75)',lineHeight:1.8,marginBottom:14,fontWeight:400}}>
                 Mid-segment hotels had no affordable, effective way to build a strong online presence. They were losing revenue to OTA commissions and struggling with fragmented, expensive tools.
               </p>
-              <p style={{fontSize:15.5,color:'rgba(255,255,255,0.5)',lineHeight:1.8,fontWeight:400}}>
+              <p style={{fontSize:15.5,color:'rgba(255,255,255,0.75)',lineHeight:1.8,fontWeight:400}}>
                 We built the tools, the strategies, and the team to fix that. Today Apex Bookings serves 200+ hotels across India with channel management, revenue optimization, cloud software, and digital marketing — under one roof, with one team.
               </p>
               <div className="about-stats">

@@ -9,8 +9,8 @@ export default function Footer() {
           <p className="footer-tagline">India's leading hotel revenue management &amp; technology company. Established 2017.</p>
           <div style={{display:'flex',flexDirection:'column',gap:4}}>
             <span className="footer-contact-item">Phartyal's Annexe, Anupam Vihar, Haldwani — 263139</span>
-            <span className="footer-contact-item" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>+91 8171871902</span>
-            <span className="footer-contact-item">info@apexbookings.in</span>
+            <span className="footer-contact-item" style={{ fontSize: '1.4rem', fontWeight: '900', color: '#fff', margin: '14px 0 8px' }}>+91 81718 71902</span>
+            <span className="footer-contact-item" style={{ fontSize: '1.2rem', color: '#fff', fontWeight: 'bold' }}>info@apexbookings.in</span>
           </div>
         </div>
         {[
@@ -31,7 +31,7 @@ export default function Footer() {
         ))}
       </div>
       <div className="footer-bottom">
-        <span className="footer-copy">© 2024 Apex Bookings. All rights reserved.</span>
+        <span className="footer-copy">© 2026 Apex Bookings. All rights reserved.</span>
       </div>
     </footer>
   )

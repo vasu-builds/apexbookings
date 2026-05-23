@@ -65,10 +65,16 @@ export default function Contact() {
   return (
     <>
             <Head>
-        <title>Contact Apex Bookings — Get a Free Hotel Consultation</title>
-        <meta name="description" content="Contact Apex Bookings for a free consultation on hotel technology, revenue management, or OTA listing. WhatsApp, call, or email. Based in Haldwani, serving hotels across India."/>
+        <title>Contact Apex Bookings | Hotel OTA & Revenue Experts</title>
+        <meta name="description" content="Contact Apex Bookings for hotel OTA onboarding, channel manager setup, booking engine integration & hotel revenue growth solutions."/>
         <meta name="keywords" content="contact apex bookings, hotel technology consultation, apex bookings haldwani, hotel management company contact"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="ApexBookings" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://apexbookings.in/contact"/>
         <meta property="og:title" content="Contact Apex Bookings — Get a Free Hotel Consultation"/>
         <meta property="og:description" content="Contact Apex Bookings for a free consultation on hotel technology, revenue management, or OTA listing. WhatsApp, call, or email. Based in Haldwani, serving hotels across India."/>
@@ -83,7 +89,6 @@ export default function Contact() {
       <div style={{paddingTop:68}}>
         <div style={{background:'var(--surface)',borderBottom:'1px solid var(--border)',padding:'52px 0 40px'}}>
           <div className="container">
-            <span className="label">Contact</span>
             <h1 style={{fontFamily:'Outfit,sans-serif',fontSize:'clamp(28px,4vw,52px)',fontWeight:800,color:'var(--ink)',letterSpacing:'-0.03em',lineHeight:1.1,marginBottom:10}}>
               Let's talk about your hotel
             </h1>
